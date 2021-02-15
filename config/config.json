@@ -1,18 +1,20 @@
 {
-    "development": {
-      "use_env_variable": "LOCAL_HOST",
-      "dialect": "mysql"
-    },
-    "test": {
-      "username": "root",
-      "password": "rootingABC1",
-      "database": "beer_db",
-      "host": "127.0.0.1",
-      "dialect": "mysql"
-    },
-    "production": {
-      "use_env_variable": "JAWSDB_URL",
-      "dialect": "mysql"
-    }
+  "development": {
+    "username": "root",
+    "password": "rootingABC1",
+    "database": "beer_db",
+    "host": "127.0.0.1",
+    "use_env_variable": "localhostproject2",
+    "dialect": "mysql"
+  },
+ 
+  "production": {
+    "username": "root",
+    "password": "rootingABC1",
+    "database": "JAWSDB_URL",
+    "host": "127.0.0.1",
+    "use_env_variable": "JAWSDB_URL",
+    "dialect": "mysql"
   }
+}
   

@@ -12,6 +12,5 @@ CREATE TABLE beers(
     beer_taste VARCHAR(100) NOT NULL,
     beer_pairing VARCHAR(100) NOT NULL,
     beer_price DECIMAL(10,2) NOT NULL,
-    ordered BOOLEAN DEFAULT false,
     PRIMARY KEY(id)
 );
