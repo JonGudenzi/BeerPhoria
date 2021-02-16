@@ -6,6 +6,7 @@ var suggestion = document.querySelector('#didyoumean')
 var resultList = document.querySelector('#result')
 
 
+
 let sentence = 'Searching for beers...? See what we have on tap!'
 
 search(str.value, sentence) // true
@@ -33,10 +34,10 @@ $("#btnSearch").on("click", function () {
 });
 
 ////////////////////   POST   ///////////////////////////////////
-$('.create-btn').on('click', function (event) {
+$('form').on('submit', function (event) {
     event.preventDefault();
 
-    var nameInput = $(this).siblings('[name=beer_name]').val();
+    var nameInput = $('#beerExample').val();
     if (nameInput) {
       var beerInfo = {
         beer_name: nameInput,
@@ -47,7 +48,7 @@ $('.create-btn').on('click', function (event) {
         data: beerInfo,
       }).then(function (data) {
         console.log(data);
-        // location.reload();
+        location.reload();
       });
     }
   });

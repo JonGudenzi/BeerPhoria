@@ -1,12 +1,20 @@
 var express = require("express");
 var router = express.Router();
 var beer = require("../models/beer.js");
+var db = require("../models");
+
 
 ////////////////////   POST   ///////////////////////////////////
 router.post('/api/beers/create', async (req, res) => {
-  const newBeer = await beer.create({
+  const newBeer = await db.beer.create({
     beer_name: req.body.beer_name,
+ 
   });
+  console.log(newBeer);
+
+
+ 
+
   // try {
   //   const dbBeer = await newBeer.save();
   //   res.redirect('/');
