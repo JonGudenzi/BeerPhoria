@@ -8,16 +8,11 @@ module.exports = function (app) {
   app.get("/", function (req, res) {
 
     db.beer.findAll({}).then(data => {
-      console.log(data);
       var hbsObject = {
         beerData: data
       };
       res.render("index", hbsObject);
     });
-    //if (req.user) {
-    //   res.redirect("/members");
-    // }
-    // res.sendFile(path.join(__dirname, "../public/signup.html"));
   });
 
   app.get("/beers/:query", function (req, res) {

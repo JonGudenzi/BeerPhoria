@@ -2,8 +2,9 @@ var express = require("express");
 var router = express.Router();
 var beer = require("../models/beer.js");
 
+////////////////////   POST   ///////////////////////////////////
 router.post('/api/beers/create', async (req, res) => {
-  const newBeer = new db.beers({
+  const newBeer = beer.create({
     beer_name: req.body.beer_name,
   });
   try {
@@ -14,6 +15,13 @@ router.post('/api/beers/create', async (req, res) => {
   }
 });
 
+// router.post("/api/beers/create", (req, res) => {
+//   beers.create(["beer_name"], [req.body.beer_name], (result) => {
+//     res.json({ id: result.insertId });
+//   });
+// });
+
+////////////////////   PUT   ///////////////////////////////////
 router.put("/beers/ordered/:id", (req, res) => {
   var condition = "id = " + req.params.id;
 
@@ -23,7 +31,7 @@ router.put("/beers/ordered/:id", (req, res) => {
       res.json(result)
     }
   );
-  console.log("condition", condition);
+  
 });
 
 module.exports = router;

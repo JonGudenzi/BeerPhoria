@@ -13,7 +13,7 @@ search(str.value, sentence) // true
 suggest(str.value, sentence) // popular beers
 
 regex(str.value) // new RegExp(...puzzy...)
-console.log(sentence.match);
+
 sentence.match(regex(str.value)) !== null;
 str.addEventListener('input', () => {
     if (search(str.value, sentence))
@@ -32,6 +32,7 @@ $("#btnSearch").on("click", function () {
     }
 });
 
+////////////////////   POST   ///////////////////////////////////
 $('.create-btn').on('click', function (event) {
     event.preventDefault();
 
@@ -45,7 +46,6 @@ $('.create-btn').on('click', function (event) {
         url: '/api/beers/create',
         data: beerInfo,
       }).then(function (data) {
-        // reload page to display devoured beers in proper column
         location.reload();
       });
     }
