@@ -46,7 +46,8 @@ $('.create-btn').on('click', function (event) {
         url: '/api/beers/create',
         data: beerInfo,
       }).then(function (data) {
-        location.reload();
+        console.log(data);
+        // location.reload();
       });
     }
   });

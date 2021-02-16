@@ -4,16 +4,18 @@ var beer = require("../models/beer.js");
 
 ////////////////////   POST   ///////////////////////////////////
 router.post('/api/beers/create', async (req, res) => {
-  const newBeer = beer.create({
+  const newBeer = await beer.create({
     beer_name: req.body.beer_name,
   });
-  try {
-    const dbBeer = await newBeer.save();
-    res.redirect('/');
-  } catch (err) {
-    res.status(500).json(err);
-  }
+  // try {
+  //   const dbBeer = await newBeer.save();
+  //   res.redirect('/');
+  // } catch (err) {
+  //   res.status(500).json(err);
+  // }
+
 });
+
 
 // router.post("/api/beers/create", (req, res) => {
 //   beers.create(["beer_name"], [req.body.beer_name], (result) => {

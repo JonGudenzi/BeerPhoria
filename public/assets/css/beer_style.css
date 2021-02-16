@@ -1,7 +1,29 @@
+.containerBanner {
+    background-color: #00502A;
+    text-align: center;
+    text-justify: center;
+    margin: 10px;
+    height: 75px;
+}
+.img {
+    margin: 10px;
+    width: 150px;
+    height: 150px;
+}
+
+.search {
+background-color: rgb(192, 190, 190);
+}
+
+.searchbtn {
+    background-color: #bf923b; 
+}
+
 .card {
     border: 20px;
     border-color: black;
-     display: inline-block; 
+    display: inline-block;  
+     
 }
 
 .card-img-top {
@@ -15,8 +37,56 @@
 
 .beerData{
     margin-left: 50px;
+    color: #00502A;
+    font-weight: bold;
+    text-align: center;
 }
 
 .beerName{
     margin-left: 50px;
+    color: #00502A;
+    text-align: center;
+    text-decoration: underline;
 }
+
+hr {
+    color: #00502A;
+    height:20px;
+}
+.form-style{
+    border: 4px black;
+    text-align: center;
+    background-color:#00502A; 
+    max-width: 300px;
+}
+.beerName-form {
+    color:#bf923b; 
+    margin-bottom: 10px;
+}
+
+.form-control {
+margin-top: 10px;
+max-width: 200px;
+text-align: center;
+display: center;
+}
+
+.btn {
+float: center;
+margin-top: 0px;
+margin-bottom: 5px;
+}
+
+footer {
+    background-color: #00502A;
+    height: 50ox;
+    text-align: center;
+}
+
+.contributers {
+    text-decoration: underline;
+}
+
+hr {
+color: black;
+  }
